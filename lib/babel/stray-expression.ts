@@ -46,6 +46,7 @@ const customMath = {
 	SQRT2: 1.4142135623730951,
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function ({ types: t }: any): { visitor: TraverseOptions<Node> } {
 
 	function visit(path: any) {
@@ -102,7 +103,7 @@ export default function ({ types: t }: any): { visitor: TraverseOptions<Node> } 
 				expression(path);
 				visit(path);
 			},
-			CallExpression(path) {
+			CallExpression(path : any) {
 				if (path.node.callee['object'] && path.node.callee['object'].name == 'console') return;
 				expression(path);
 				visit(path);

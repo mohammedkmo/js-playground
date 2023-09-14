@@ -3,6 +3,7 @@
 
 import type { TraverseOptions, Node } from '@babel/traverse';
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function ({ types: t }: { types: any }): { visitor: TraverseOptions<Node> } {
 	return {
 		visitor: {

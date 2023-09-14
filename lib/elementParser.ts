@@ -1,7 +1,7 @@
 'use client'
 
-import jc from "json-cycle";
-import ObjetToString from "stringify-object";
+const jc =  require("json-cycle");
+const ObjetToString = require("stringify-object");
 
 export enum Colors {
   TRUE = "#1f924a",
@@ -54,7 +54,7 @@ export function flattenColoredElement(
     })
     .flat();
 }
-export async function stringify(element: any) {
+export async function stringify(element: any) : Promise<any> {
   if (Array.isArray(element)) {
     return {
       content: ObjetToString(jc.decycle(element), {

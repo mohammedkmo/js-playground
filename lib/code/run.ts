@@ -63,7 +63,7 @@ export async function run(string: string): Promise<Result[] | Error> {
         type: "execution",
       };
     });
-    let parsedResults = await Promise.all(promises);
+    let parsedResults : any = await Promise.all(promises);
 
     return parsedResults;
   } catch (e: any) {
