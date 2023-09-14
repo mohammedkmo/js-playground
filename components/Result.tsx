@@ -19,7 +19,7 @@ const Result: FC = () => {
 
       DiffResult({ codeResult, lineNumber });
     });
-  function DiffResult({ codeResult, lineNumber }) {
+  function DiffResult({ codeResult, lineNumber } : any) {
     AllResults.splice(lineNumber - 1, 1, codeResult + "\n");
   }
 
