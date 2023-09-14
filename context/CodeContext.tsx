@@ -1,4 +1,6 @@
+'use client'
+
 import { createContext } from 'react';
-export const CodeContext = createContext("")
-export const CodeResultContext = createContext("")
+export const CodeContext = createContext({})
+export const CodeResultContext = createContext({})
 

@@ -11,8 +11,8 @@ interface SplitComponentProps {
 
 const SplitComponent: FC<SplitComponentProps> = ({ children }) => {
 
-    const [code, setCode] = useState("");
-    const [result, setResult] = useState("");
+    const [code, setCode] = useState<String>("");
+    const [result, setResult] = useState<String>("");
 
     const [sizes, setSizes] = useState(() => {
         return [70, 30]
@@ -26,8 +26,8 @@ const SplitComponent: FC<SplitComponentProps> = ({ children }) => {
 
 
     return (
-        <CodeContext.Provider value={code}>
-            <CodeResultContext.Provider value={result}>
+        <CodeContext.Provider value={{ code, setCode }}>
+            <CodeResultContext.Provider value={{ result, setResult }}>
                 <Split
                     className={`flex h-full overflow-hidden bg-gray-800`}
                     sizes={sizes}
