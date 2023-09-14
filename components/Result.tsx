@@ -1,19 +1,19 @@
 'use client'
 
 import Editor, { DiffEditor, useMonaco, loader } from '@monaco-editor/react';
-import { FC, useContext } from 'react';
+import { Context, FC, ServerContext, useContext } from 'react';
 import { CodeResultContext } from "../context/CodeContext";
 
 const Result: FC = () => {
 
-  const { result: elements } = useContext(CodeResultContext);
+  const  {result} : any = useContext(CodeResultContext);
 
-  console.log(elements);
+  console.log(result);
 
-  const LastLineNumber = elements ? elements.at(-1)?.lineNumber : 0;
+  const LastLineNumber = result ? result.at(-1)?.lineNumber : 0;
   const AllResults = Array.from({ length: LastLineNumber }).fill("\n");
-  elements &&
-    elements.forEach((data: any) => {
+  result &&
+    result.forEach((data: any) => {
       const { element, lineNumber } = data;
       const codeResult = element.content;
 
