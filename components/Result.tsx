@@ -69,10 +69,8 @@ const Result: FC = () => {
           },
         }}
         value={AllResults.join("")}
-        // onChange={handler}
-        // defaultValue={code}
+        loading={''}
         beforeMount={handleEditorWillMount}
-      // onMount={handleEditorDidMount}
       />
     </>
   )

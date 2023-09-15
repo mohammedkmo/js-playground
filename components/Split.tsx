@@ -29,7 +29,7 @@ const SplitComponent: FC<SplitComponentProps> = ({ children }) => {
         <CodeContext.Provider value={{ code, setCode }}>
             <CodeResultContext.Provider value={{ result, setResult }}>
                 <Split
-                    className={`flex h-full overflow-hidden bg-gray-800`}
+                    className={`flex h-full overflow-hidden bg-[#1a1c22]`}
                     sizes={sizes}
                     gutterSize={4}
                     cursor="col-resize"

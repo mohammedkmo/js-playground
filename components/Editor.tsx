@@ -73,6 +73,7 @@ export default function EditorComponent() {
           wordWrap: "on",
         }}
         onChange={handler}
+        loading={''}
         defaultValue={code}
         beforeMount={handleEditorWillMount}
         onMount={handleEditorDidMount}
